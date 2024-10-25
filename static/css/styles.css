@@ -1,0 +1,12 @@
+.card-header {
+    background-color: #ffc107; /* Adjust warning color if needed */
+}
+
+.card-footer {
+    padding-top: 15px;
+}
+
+button.btn-warning {
+    font-size: 1.1rem;
+}
+

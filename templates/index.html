@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4">Welcome to OM SAI Hardware Inventory System</h1>
+        <p class="lead">Easily manage your inventory, track sales, generate reports, and restock items with just a few clicks.</p>
+    </div>
+    
+    <div class="row justify-content-center">
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-lg">
+                <div class="card-body text-center">
+                    <i class="fas fa-box-open fa-3x mb-3 text-primary"></i>
+                    <h5 class="card-title">Add New Item</h5>
+                    <a href="/add_item" class="btn btn-primary btn-block">Add Item</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-lg">
+                <div class="card-body text-center">
+                    <i class="fas fa-cash-register fa-3x mb-3 text-success"></i>
+                    <h5 class="card-title">Record Sale</h5>
+                    <a href="/sale" class="btn btn-success btn-block">Record Sale</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-lg">
+                <div class="card-body text-center">
+                    <i class="fas fa-chart-bar fa-3x mb-3 text-info"></i>
+                    <h5 class="card-title">View Reports</h5>
+                    <a href="/report" class="btn btn-info btn-block">View Reports</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-lg">
+                <div class="card-body text-center">
+                    <i class="fas fa-warehouse fa-3x mb-3 text-warning"></i>
+                    <h5 class="card-title">Restock Inventory</h5>
+                    <a href="/restock" class="btn btn-warning btn-block">Restock</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

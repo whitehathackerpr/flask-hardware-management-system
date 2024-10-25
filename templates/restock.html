@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-warning text-white text-center">
+                    <h3 class="mb-0 font-weight-bold">Restock Inventory</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/restock" method="POST">
+                        <!-- Item Selection -->
+                        <div class="form-group">
+                            <label for="item_id" class="font-weight-bold">Select Item to Restock</label>
+                            <select class="form-control" name="item_id" required>
+                                <option value="">-- Choose an Item --</option>
+                                {% for item in items %}
+                                    <option value="{{ item[0] }}">{{ item[1] }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <!-- Quantity Input -->
+                        <div class="form-group">
+                            <label for="quantity" class="font-weight-bold">Quantity to Restock</label>
+                            <input type="number" class="form-control" name="quantity" placeholder="Enter quantity to restock" required>
+                        </div>
+
+                        <!-- Supplier Input -->
+                        <div class="form-group">
+                            <label for="supplier" class="font-weight-bold">Supplier Name</label>
+                            <input type="text" class="form-control" name="supplier" placeholder="Enter supplier name" required>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-warning btn-block font-weight-bold">Restock Item</button>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="{{ url_for('index') }}" class="btn btn-secondary btn-sm">Back to Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
