@@ -1,0 +1,1 @@
+# flask-hardware-management-system
